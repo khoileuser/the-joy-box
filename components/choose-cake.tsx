@@ -76,7 +76,7 @@ function ListCakes({
                             width="0"
                             height="0"
                             sizes="100vw"
-                            className="w-auto h-50 rounded"
+                            className="w-auto h-45 rounded"
                         />
                     </div>
                     <span className="h-full w-full row-span-1 font-extrabold text-2xl pt-1 flex justify-center items-center">
@@ -151,12 +151,12 @@ export default function ChooseCake({
 }) {
     return (
         <div className="grid grid-rows-6">
-            <div className="row-span-2 flex justify-center items-center">
+            <div className="row-span-1 flex justify-center items-center">
                 <span className="secondary-text-color text-7xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60">
                     CHOOSE 4 MOONCAKES
                 </span>
             </div>
-            <div className="row-span-3 p-10">
+            <div className="row-span-5 p-10">
                 <div className="h-full grid grid-cols-5 gap-5">
                     <div className="col-span-3 p-20 flex flex-col justify-center items-center">
                         {/* mooncakse carousel  */}
