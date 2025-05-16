@@ -22,7 +22,12 @@ export default function NavigationBar() {
                             />
                         </Link>
                         <div className="hidden md:flex gap-8 mt-3 text-md text-white/90">
-                            <Link href="/">TRANG CHỦ</Link>
+                            <Link
+                                href="/"
+                                className="underline underline-offset-5"
+                            >
+                                TRANG CHỦ
+                            </Link>
                             <Link href="/">GIỚI THIỆU</Link>
                             <Link href="/">
                                 <span className="flex flex-row">
