@@ -94,7 +94,7 @@ function ListTeas({
                             className="w-auto h-35 rounded"
                         />
                     </div>
-                    <span className="h-full w-full row-span-1 font-extrabold text-lg pt-1 flex justify-center items-center">
+                    <span className="h-full w-full row-span-1 font-extrabold text-lg pt-1 flex justify-center items-center 2xl:text-2xl">
                         {tea.name}
                     </span>
                 </div>
@@ -135,18 +135,18 @@ function ListSelectedTea({
                                 className="w-auto h-40 rounded"
                             />
                         </div>
-                        <span className="row-span-1 font-extrabold text-xl flex justify-center items-center text-pretty">
+                        <span className="row-span-1 font-extrabold text-xl flex justify-center items-center text-pretty 2xl:text-2xl">
                             {tea.name}
                         </span>
                     </div>
                     <div className="col-span-1 grid grid-rows-3">
                         <div className="row-span-1 flex flex-col items-center">
                             <span
-                                className={`font-medium text-xl flex justify-center items-center ${notoSerifDisplay.className}`}
+                                className={`font-medium text-xl flex justify-center items-center ${notoSerifDisplay.className} 2xl:text-2xl`}
                             >
                                 <i>{tea.description.header[0]}</i>
                             </span>
-                            <span className="font-extrabold text-2xl flex justify-center items-center">
+                            <span className="font-extrabold text-2xl flex justify-center items-center 2xl:text-3xl">
                                 {tea.description.header[1]}
                             </span>
                         </div>
@@ -157,7 +157,7 @@ function ListSelectedTea({
                                     return (
                                         <li
                                             key={index}
-                                            className={`font-medium text-base flex justify-start items-center text-start ${notoSerifDisplay.className}`}
+                                            className={`font-medium text-base flex justify-start items-center text-start ${notoSerifDisplay.className} 2xl:text-xl 2xl:mb-3`}
                                         >
                                             <Image
                                                 src="/images/tea-bullet.png"
@@ -181,7 +181,7 @@ function ListSelectedTea({
             Array.from({ length: 1 - selectedTeas.length }, (_, index) => (
                 <div
                     key={index}
-                    className="rounded-[2vw] selected-tea flex flex-row justify-center items-center p-30 aspect-4/2"
+                    className="rounded-[2vw] selected-tea flex flex-row justify-center items-center p-30 aspect-4/2 2xl:text-2xl"
                 >
                     TEA OPTION
                 </div>
@@ -204,13 +204,13 @@ export default function ChooseTea({
     return (
         <div className="grid grid-rows-6">
             <div className="row-span-1 flex justify-center items-center">
-                <span className="secondary-text-color text-5xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60">
+                <span className="secondary-text-color text-5xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60 2xl:text-6xl">
                     CHOOSE 1 TYPE OF TEA
                 </span>
             </div>
             <div className="row-span-5 p-10">
                 <div className="h-full grid grid-cols-5 gap-5">
-                    <div className="col-span-3 p-10 flex flex-col items-center">
+                    <div className="col-span-3 p-10 flex flex-col items-center 2xl:justify-center">
                         {/* mooncakse carousel  */}
                         <Carousel className="">
                             <CarouselContent>
@@ -225,11 +225,11 @@ export default function ChooseTea({
                                 </CarouselItem>
                             </CarouselContent>
                         </Carousel>
-                        <span className="text-2xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60">
+                        <span className="text-2xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60 2xl:text-4xl">
                             WE HAVE 3 OPTIONS
                         </span>
                     </div>
-                    <div className="col-span-2 flex flex-col items-center mb-20">
+                    <div className="col-span-2 flex flex-col items-center mb-20 2xl:justify-center">
                         {/* selected tea  */}
                         <div className="selected-tea-box rounded-[2vw]">
                             <span className="font-extrabold text-3xl flex justify-center items-center p-1 pt-4 tea-selection-text">

@@ -54,7 +54,7 @@ function ListSelectedCakes({
                                     className="w-auto h-25 rounded"
                                 />
                             </div>
-                            <span className="h-full w-full row-span-1 font-extrabold text-sm pt-1 flex justify-center items-center">
+                            <span className="h-full w-full row-span-1 font-extrabold text-sm pt-1 flex justify-center items-center 2xl:text-xl">
                                 {cake.name}
                             </span>
                         </div>
@@ -90,7 +90,7 @@ function ListSelectedTea({
                                     className="w-auto h-30 rounded"
                                 />
                             </div>
-                            <span className="h-full w-full row-span-2 font-extrabold text-lg pt-1 flex justify-center items-center">
+                            <span className="h-full w-full row-span-2 font-extrabold text-lg pt-1 flex justify-center items-center 2xl:text-2xl">
                                 {tea.name}
                             </span>
                         </div>
@@ -118,7 +118,7 @@ export default function Checkout({
                 </span>
             </div>
             <div className="grid grid-cols-2 gap-4 h-full pr-30 pl-30">
-                <div className="col-span-1 flex flex-col items-center justify-center h-full gap-1 p-0">
+                <div className="col-span-1 flex flex-col items-center justify-center h-full gap-1 p-0 2xl:gap-7">
                     <div className="rounded-[5vw] grid grid-cols-3 border-10 border-white border-dashed p-8 gap-4">
                         <div className="col-span-2">
                             <ListSelectedCakes selectedCakes={selectedCakes} />
@@ -138,7 +138,7 @@ export default function Checkout({
                 <div className="col-span-1 flex flex-col items-center justify-center h-full gap-7">
                     <div className="flex flex-col items-center justify-center w-full">
                         <span
-                            className={`text-6xl text-white ${meowScript.className}`}
+                            className={`text-6xl text-white ${meowScript.className} 2xl:text-8xl`}
                         >
                             Open me
                         </span>
@@ -152,7 +152,7 @@ export default function Checkout({
                                     width="0"
                                     height="0"
                                     sizes="100vw"
-                                    className="w-auto h-60"
+                                    className="w-auto h-60 2xl:h-100"
                                 />
                             </div>
                         </DialogTrigger>
@@ -160,7 +160,7 @@ export default function Checkout({
                             <DialogHeader>
                                 <DialogTitle className="hidden"></DialogTitle>
                                 <DialogDescription className="relative">
-                                    <div className="p-10 pt-15 pb-15">
+                                    <div className="p-10 pt-15 pb-15 2xl:pt-30 2xl:pb-30">
                                         <span
                                             className={`text-xl text-black whitespace-pre-wrap ${trueTypeWriter.className}`}
                                         >

@@ -79,7 +79,7 @@ function ListCakes({
                             className="w-auto h-35 rounded"
                         />
                     </div>
-                    <span className="h-full w-full row-span-1 font-extrabold text-lg pt-1 flex justify-center items-center">
+                    <span className="h-full w-full row-span-1 font-extrabold text-lg pt-1 flex justify-center items-center 2xl:text-2xl">
                         {cake.name}
                     </span>
                 </div>
@@ -129,7 +129,7 @@ function ListSelectedCakes({
             Array.from({ length: 4 - selectedCakes.length }, (_, index) => (
                 <div
                     key={index}
-                    className="text-lg rounded-[2vw] selected-cake flex flex-row justify-center items-center p-9 aspect-4/2"
+                    className="text-lg rounded-[2vw] selected-cake flex flex-row justify-center items-center p-9 aspect-4/2 2xl:text-2xl"
                 >
                     MOONCAKE <br /> OPTION {index + selectedCakes.length + 1}
                 </div>
@@ -152,13 +152,13 @@ export default function ChooseCake({
     return (
         <div className="grid grid-rows-6">
             <div className="row-span-1 flex justify-center items-center">
-                <span className="secondary-text-color text-5xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60">
+                <span className="secondary-text-color text-5xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60 2xl:text-6xl">
                     CHOOSE 4 MOONCAKES
                 </span>
             </div>
             <div className="row-span-5 p-10">
                 <div className="h-full grid grid-cols-5 gap-5">
-                    <div className="col-span-3 p-10 flex flex-col items-center">
+                    <div className="col-span-3 p-10 flex flex-col items-center 2xl:justify-center">
                         {/* mooncakse carousel  */}
                         <Carousel className="">
                             <CarouselContent>
@@ -184,11 +184,11 @@ export default function ChooseCake({
                             <CarouselPrevious />
                             <CarouselNext />
                         </Carousel>
-                        <span className="text-2xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60">
+                        <span className="text-2xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60 2xl:text-4xl">
                             WE HAVE 13 FLAVOURS
                         </span>
                     </div>
-                    <div className="col-span-2 flex flex-col items-center">
+                    <div className="col-span-2 flex flex-col items-center 2xl:justify-center">
                         {/* selected mooncakes  */}
                         <div className="selected-cake-box rounded-[2vw]">
                             <span className="font-extrabold text-4xl flex justify-center items-center p-1 pt-4 cake-selection-text">
