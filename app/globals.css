@@ -215,7 +215,11 @@ body {
 }
 
 .letter-popup-background {
-    background-color: #eeebe2;
+    /* background-color: #eeebe2; */
+    background-image: url("/images/letter-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .alt-btn-background {

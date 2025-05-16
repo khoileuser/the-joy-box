@@ -156,13 +156,13 @@ export default function Checkout({
                                 />
                             </div>
                         </DialogTrigger>
-                        <DialogContent className="letter-popup-background max-w-[45vw] border-5 letter-border">
+                        <DialogContent className="letter-popup-background p-0 max-w-[32vw] rounded-[1.4vw]">
                             <DialogHeader>
                                 <DialogTitle className="hidden"></DialogTitle>
                                 <DialogDescription className="relative">
-                                    <div className="p-3 pb-0">
+                                    <div className="p-10 pt-30 pb-30">
                                         <span
-                                            className={`text-2xl whitespace-pre-wrap ${trueTypeWriter.className}`}
+                                            className={`text-2xl text-black whitespace-pre-wrap ${trueTypeWriter.className}`}
                                         >
                                             {text.map((line, index) => {
                                                 return (
@@ -178,14 +178,14 @@ export default function Checkout({
                                             })}
                                         </span>
                                     </div>
-                                    <div className="absolute bottom-0 right-0 flex gap-5 p-5">
+                                    {/* <div className="absolute bottom-0 right-0 flex gap-5 p-5">
                                         <Button className="text-2xl text-black font-bold rounded-[3vw] alt-btn-background h-fit p-2 pl-14 pr-14">
                                             Edit
                                         </Button>
                                         <Button className="text-2xl text-black font-bold rounded-[3vw] alt-btn-background h-fit p-2 pl-5 pr-5">
                                             Regenerate
                                         </Button>
-                                    </div>
+                                    </div> */}
                                 </DialogDescription>
                             </DialogHeader>
                         </DialogContent>
