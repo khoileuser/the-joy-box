@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <link rel="icon" type="image/svg+xml" href="images/favicon.png" />
+            <link rel="icon" href="images/favicon.png" />
             <body className={`${PhuduFont.variable} antialiased`}>
                 {children}
             </body>
