@@ -109,7 +109,7 @@ export default function Home() {
                     <div className="row-span-1 flex flex-row justify-center text-center gap-5">
                         {tab === "chooseTea" ? (
                             <Button
-                                className="text-6xl text-black font-bold rounded-[3vw] next-background h-fit p-15 pt-3 pb-4"
+                                className="text-4xl text-black font-bold rounded-[3vw] next-background h-fit p-15 pt-3 pb-4"
                                 onClick={() => {
                                     setTab("chooseCake")
                                 }}
@@ -121,7 +121,7 @@ export default function Home() {
                         )}
                         {tab !== "checkout" ? (
                             <Button
-                                className="text-6xl text-black font-bold rounded-[3vw] next-background h-fit p-15 pt-3 pb-4"
+                                className="text-4xl text-black font-bold rounded-[3vw] next-background h-fit p-15 pt-3 pb-4"
                                 onClick={() => {
                                     if (tab === "chooseCake") {
                                         setTab("chooseTea")

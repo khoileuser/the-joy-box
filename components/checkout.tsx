@@ -43,7 +43,7 @@ function ListSelectedCakes({
                         key={cake + index}
                         className="rounded-[2vw] cake-background flex flex-col justify-center items-center text-center aspect-square hover:shadow-md hover:shadow-black"
                     >
-                        <div className="grid grid-rows-4 h-full w-full p-5">
+                        <div className="grid grid-rows-4 h-full w-full p-3">
                             <div className="flex justify-center items-center row-span-3 mb-5">
                                 <Image
                                     src={cake.image}
@@ -51,10 +51,10 @@ function ListSelectedCakes({
                                     width="0"
                                     height="0"
                                     sizes="100vw"
-                                    className="w-auto h-30 rounded"
+                                    className="w-auto h-25 rounded"
                                 />
                             </div>
-                            <span className="h-full w-full row-span-1 font-extrabold text-xl pt-1 flex justify-center items-center">
+                            <span className="h-full w-full row-span-1 font-extrabold text-sm pt-1 flex justify-center items-center">
                                 {cake.name}
                             </span>
                         </div>
@@ -87,10 +87,10 @@ function ListSelectedTea({
                                     width="0"
                                     height="0"
                                     sizes="100vw"
-                                    className="w-auto h-50 rounded"
+                                    className="w-auto h-30 rounded"
                                 />
                             </div>
-                            <span className="h-full w-full row-span-2 font-extrabold text-3xl pt-1 flex justify-center items-center">
+                            <span className="h-full w-full row-span-2 font-extrabold text-lg pt-1 flex justify-center items-center">
                                 {tea.name}
                             </span>
                         </div>
@@ -112,13 +112,13 @@ export default function Checkout({
 }) {
     return (
         <div className="flex flex-col items-center h-full">
-            <div className="checkout-banner w-full p-8 pt-11">
-                <span className="text-6xl font-bold flex justify-center items-center text-white text-shadow-slate-800 text-shadow-lg/80">
+            <div className="checkout-banner w-full p-6 pt-10">
+                <span className="text-4xl font-bold flex justify-center items-center text-white text-shadow-slate-800 text-shadow-lg/80">
                     THE STORY FROM YOUR SELECTION IS READY
                 </span>
             </div>
             <div className="grid grid-cols-2 gap-4 h-full pr-30 pl-30">
-                <div className="col-span-1 flex flex-col items-center justify-center h-full gap-7 p-0">
+                <div className="col-span-1 flex flex-col items-center justify-center h-full gap-1 p-0">
                     <div className="rounded-[5vw] grid grid-cols-3 border-10 border-white border-dashed p-8 gap-4">
                         <div className="col-span-2">
                             <ListSelectedCakes selectedCakes={selectedCakes} />
@@ -127,10 +127,10 @@ export default function Checkout({
                             <ListSelectedTea selectedTea={selectedTea} />
                         </div>
                     </div>
-                    <Button className="text-4xl text-black font-bold rounded-[3vw] next-background h-fit p-10 pt-3 pb-4">
+                    <Button className="mt-2 text-2xl text-black font-bold rounded-[3vw] next-background h-fit p-8 pt-2 pb-3">
                         Input your personal description
                     </Button>
-                    <span className="text-white text-4xl font-light text-center pr-20 pl-20">
+                    <span className="text-white text-2xl font-light text-center pr-20 pl-20">
                         can be anything (your idea, your request, writing style
                         etc)
                     </span>
@@ -138,7 +138,7 @@ export default function Checkout({
                 <div className="col-span-1 flex flex-col items-center justify-center h-full gap-7">
                     <div className="flex flex-col items-center justify-center w-full">
                         <span
-                            className={`text-8xl text-white ${meowScript.className}`}
+                            className={`text-6xl text-white ${meowScript.className}`}
                         >
                             Open me
                         </span>
@@ -152,7 +152,7 @@ export default function Checkout({
                                     width="0"
                                     height="0"
                                     sizes="100vw"
-                                    className="w-auto h-80"
+                                    className="w-auto h-60"
                                 />
                             </div>
                         </DialogTrigger>
@@ -160,9 +160,9 @@ export default function Checkout({
                             <DialogHeader>
                                 <DialogTitle className="hidden"></DialogTitle>
                                 <DialogDescription className="relative">
-                                    <div className="p-10 pt-30 pb-30">
+                                    <div className="p-10 pt-15 pb-15">
                                         <span
-                                            className={`text-2xl text-black whitespace-pre-wrap ${trueTypeWriter.className}`}
+                                            className={`text-xl text-black whitespace-pre-wrap ${trueTypeWriter.className}`}
                                         >
                                             {text.map((line, index) => {
                                                 return (
@@ -191,10 +191,10 @@ export default function Checkout({
                         </DialogContent>
                     </Dialog>
 
-                    <Button className="text-4xl text-black font-bold rounded-[3vw] next-background h-fit p-10 pt-3 pb-4">
+                    <Button className="text-2xl text-black font-bold rounded-[3vw] next-background h-fit p-8 pt-2 pb-3">
                         Edit
                     </Button>
-                    <Button className="text-4xl text-black font-bold rounded-[3vw] next-background h-fit p-10 pt-3 pb-4">
+                    <Button className="text-2xl text-black font-bold rounded-[3vw] next-background h-fit p-8 pt-2 pb-3">
                         Purchase your gift with The Joy Box
                     </Button>
                 </div>

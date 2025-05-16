@@ -69,17 +69,17 @@ function ListCakes({
                 }}
             >
                 <div className="grid grid-rows-4 h-full w-full p-5">
-                    <div className="flex justify-center items-center row-span-3">
+                    <div className="flex justify-center items-center row-span-3 pb-1">
                         <Image
                             src={cake.image}
                             alt={cake.name}
                             width="0"
                             height="0"
                             sizes="100vw"
-                            className="w-auto h-45 rounded"
+                            className="w-auto h-35 rounded"
                         />
                     </div>
-                    <span className="h-full w-full row-span-1 font-extrabold text-2xl pt-1 flex justify-center items-center">
+                    <span className="h-full w-full row-span-1 font-extrabold text-lg pt-1 flex justify-center items-center">
                         {cake.name}
                     </span>
                 </div>
@@ -119,7 +119,7 @@ function ListSelectedCakes({
                             className="w-max h-auto"
                         />
                     </div>
-                    <span className="col-span-3 font-extrabold text-2xl flex justify-center items-center">
+                    <span className="col-span-3 font-extrabold text-lg flex justify-center items-center">
                         {cake.name}
                     </span>
                 </div>
@@ -129,7 +129,7 @@ function ListSelectedCakes({
             Array.from({ length: 4 - selectedCakes.length }, (_, index) => (
                 <div
                     key={index}
-                    className="rounded-[2vw] selected-cake flex flex-row justify-center items-center p-14 aspect-4/2"
+                    className="text-lg rounded-[2vw] selected-cake flex flex-row justify-center items-center p-9 aspect-4/2"
                 >
                     MOONCAKE <br /> OPTION {index + selectedCakes.length + 1}
                 </div>
@@ -152,13 +152,13 @@ export default function ChooseCake({
     return (
         <div className="grid grid-rows-6">
             <div className="row-span-1 flex justify-center items-center">
-                <span className="secondary-text-color text-7xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60">
+                <span className="secondary-text-color text-5xl font-extrabold mt-20 text-shadow-slate-900 text-shadow-lg/60">
                     CHOOSE 4 MOONCAKES
                 </span>
             </div>
             <div className="row-span-5 p-10">
                 <div className="h-full grid grid-cols-5 gap-5">
-                    <div className="col-span-3 p-20 flex flex-col justify-center items-center">
+                    <div className="col-span-3 p-10 flex flex-col items-center">
                         {/* mooncakse carousel  */}
                         <Carousel className="">
                             <CarouselContent>
@@ -173,18 +173,22 @@ export default function ChooseCake({
                                 </CarouselItem>
                                 <CarouselItem>
                                     <div className="grid grid-cols-3 gap-5 cake-text-color text-pretty">
-                                        <ListCakes from={0} to={3} />
+                                        <ListCakes
+                                            from={0}
+                                            to={3}
+                                            handleSelectCake={handleSelectCake}
+                                        />
                                     </div>
                                 </CarouselItem>
                             </CarouselContent>
                             <CarouselPrevious />
                             <CarouselNext />
                         </Carousel>
-                        <span className="text-4xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60">
+                        <span className="text-2xl font-extrabold mt-7 secondary-text-color text-shadow-slate-900 text-shadow-lg/60">
                             WE HAVE 13 FLAVOURS
                         </span>
                     </div>
-                    <div className="col-span-2 flex flex-col justify-center items-center">
+                    <div className="col-span-2 flex flex-col items-center">
                         {/* selected mooncakes  */}
                         <div className="selected-cake-box rounded-[2vw]">
                             <span className="font-extrabold text-4xl flex justify-center items-center p-1 pt-4 cake-selection-text">
